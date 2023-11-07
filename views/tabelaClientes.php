@@ -30,7 +30,7 @@
                         <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Logout</a>
+                        <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                     </li>
                 </ul>
 
@@ -53,7 +53,7 @@
                     <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Logout</a>
+                    <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                 </li>
             </ul>
 

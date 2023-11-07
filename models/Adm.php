@@ -26,7 +26,7 @@
                     );
                 ");
 
-                header('location: ../views/cadastro.php?cadastro=success');
+                header('location: ../index.php?cadastro=success');
             }else{
                 header('location: ../views/cadastro.php?error=password');
             }
@@ -57,6 +57,50 @@
                 header('location: ../index.php?login=erro');
             }
 
+        }
+
+        public function cadastrarFuncionario($name , $email , $password , $passwordC){
+            if($password == $passwordC){
+                $this->conn->query("
+                    INSERT INTO EMPLOYE(
+                        NAME,
+                        EMAIL,
+                        PASSWORD,
+                        ID_USER
+                    )VALUES(
+                        '{$name}',
+                        '{$email}',
+                        '{$password}',
+                        '{$_SESSION['id']}'
+                    );
+                ");
+
+                header('location: ../views/cadastroFuncionario.php?cadastro=success');
+            }else{
+                header('location: ../views/cadastroFuncionario.php?password=!');
+            }
+        }
+
+        public function getFuncionario(){
+            $search = $this->conn->query("
+                SELECT * FROM EMPLOYE WHERE ID_USER = {$_SESSION['id']};
+            ");
+
+            $consult = $search->fetchAll(PDO::FETCH_ASSOC);
+
+            return $consult;
+        }
+
+        public function deletarFuncionario($id){
+            $this->conn->query("
+                DELETE FROM EMPLOYE WHERE ID = {$id};
+            ");
+
+            header('location: ../views/tabelaFuncionarios.php');
+        }
+
+        public function getCliente(){
+            
         }
 
     }

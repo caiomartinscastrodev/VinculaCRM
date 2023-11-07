@@ -30,7 +30,7 @@
                         <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Logout</a>
+                        <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                     </li>
                 </ul>
 
@@ -53,7 +53,7 @@
                     <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Logout</a>
+                    <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                 </li>
             </ul>
 
@@ -72,10 +72,10 @@
 
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link text-light" aria-current="page" href="homeAdm.php">Olá <?php echo $_SESSION['name'];?> |</a>
+                            <a class="nav-link text-light" aria-current="page" href="#">Olá <?php echo $_SESSION['name'];?> |</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="cadastroFuncionario.php">Cadastros</a>
+                            <a class="nav-link text-light" href="#">Cadastros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#">Funcionarios</a>

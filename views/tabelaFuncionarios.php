@@ -1,5 +1,7 @@
 <?php
-    require_once('../models/Connection.php');
+    require_once('../models/Adm.php');
+
+    $data = $adm->getFuncionario();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +32,7 @@
                         <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Logout</a>
+                        <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                     </li>
                 </ul>
 
@@ -53,7 +55,7 @@
                     <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Logout</a>
+                    <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                 </li>
             </ul>
 
@@ -71,21 +73,27 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Email</th>
-                <th scope="col">Telefone</th>
+                <th scope="col">Senha</th>
+                <th scope="col"> </th>
+                <th scope="col">Opções</th>
             </tr>
         </thead>
-            <tr>
-                <th scope="row">1</th>
-                <td>teste</td>
-                <td>teste@teste</td>
-                <td>11999999999</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>teste</td>
-                <td>teste@teste</td>
-                <td>11999999999</td>
-            </tr>
+
+            <?php
+                foreach($data as $user){
+            ?>
+                <tr>
+                    <th scope="row"><?php echo $user['ID'];?></th>
+                    <td><?php echo $user['NAME'];?></td>
+                    <td><?php echo $user['EMAIL'];?></td>
+                    <td><?php echo $user['PASSWORD'];?></td>
+                    <td><button class="btn btn-success">Atualizar</button></td>
+                    <td><a href="../controllers/deletarFuncionario.php?id=<?php echo $user['ID'];?>" class="btn btn-danger">Deletar</a></td>
+                    
+                </tr>
+            <?php
+                }
+            ?>
         </table>
 
     </main>

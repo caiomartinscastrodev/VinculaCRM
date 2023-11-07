@@ -1,5 +1,7 @@
 <?php
     require_once('../models/Connection.php');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +32,7 @@
                         <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Logout</a>
+                        <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                     </li>
                 </ul>
 
@@ -53,7 +55,7 @@
                     <a class="nav-link text-light" href="tabelaClientes.php">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Logout</a>
+                    <a class="nav-link text-light" href="../controllers/logout.php">Logout</a>
                 </li>
             </ul>
 
@@ -65,7 +67,7 @@
 
         <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum libero, quasi, eaque cum doloribus facere sint officia assumenda maiores ex inventore asperiores illum eius iusto nesciunt odio tempore consectetur amet!</p>
 
-        <form class="border rounded p-3" method="post" action="">
+        <form action="../controllers/cadastrarFuncionario.php" class="border rounded p-3" method="post" action="">
             <div class="w-75 mx-auto">
                 <h2>Cadastre seus funcionarios!!!</h2>
             </div>
@@ -83,7 +85,7 @@
             </div>
 
             <div class="input-group w-75 mx-auto my-3">
-                <input class="form-control" type="password" name="password" id="password" placeholder="Digite confirme a senha do funcionario...">
+                <input class="form-control" type="password" name="passwordC" id="passwordC" placeholder="Digite confirme a senha do funcionario...">
             </div>
 
             <div class="w-75 mx-auto my-3">
