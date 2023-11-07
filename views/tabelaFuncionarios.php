@@ -1,3 +1,6 @@
+<?php
+    require_once('../models/Connection.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +18,7 @@
 
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link text-light" aria-current="page" href="homeAdm.php">Olá {Nome Usuario} |</a>
+                        <a class="nav-link text-light" aria-current="page" href="homeAdm.php">Olá <?php echo $_SESSION['name'];?> |</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="cadastroFuncionario.php">Cadastros</a>
@@ -38,7 +41,7 @@
 
             <ul class="navbar-nav collapse">
                 <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" href="homeAdm.php">Olá {Nome Usuario} |</a>
+                    <a class="nav-link text-light" aria-current="page" href="homeAdm.php">Olá <?php echo $_SESSION['name'];?> |</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="cadastroFuncionario.php">Cadastros</a>
@@ -58,7 +61,7 @@
     </header>
 
     <main class="container mt-5">
-        <h1>Olá {Nome do Usuario}</h1>
+        <h1>Olá <?php echo $_SESSION['name'];?></h1>
 
         <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum libero, quasi, eaque cum doloribus facere sint officia assumenda maiores ex inventore asperiores illum eius iusto nesciunt odio tempore consectetur amet!</p>
         

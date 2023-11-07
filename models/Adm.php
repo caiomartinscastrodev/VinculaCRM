@@ -39,16 +39,19 @@
 
             $consult = $search->fetchAll(PDO::FETCH_ASSOC);
 
-            $login = false;
+            $_SESSION['login'] = false;
 
             foreach($consult as $user){
                 if($user['EMAIL'] == $email && $user['PASSWORD'] == $password){
-                    $login = true;
+                    $_SESSION['id'] = $user['ID'];
+                    $_SESSION['name'] = $user['NAME'];
+                    $_SESSION['email'] = $user['EMAIL'];
+                    $_SESSION['login'] = true;
                 }
                 break;
             }
 
-            if($login){
+            if($_SESSION['login']){
                 header('location: ../views/homeAdm.php');
             }else{
                 header('location: ../index.php?login=erro');
