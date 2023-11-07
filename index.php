@@ -8,7 +8,7 @@
 </head>
 <body class="bg-primary">
 
-    <form method="post" class="container bg-light p-3 mt-5 rounded">
+    <form method="post" action="./controllers/loginAdm.php" class="container bg-light p-3 mt-5 rounded">
         <h1>ADM - Login</h1>
         <div class="input-group w-75 mx-auto my-3">
             <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu email...">
