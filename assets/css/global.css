@@ -1,0 +1,14 @@
+.navbar-toggler {
+    display: none;
+}
+
+@media(max-width: 900px) {
+
+    .nav {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
